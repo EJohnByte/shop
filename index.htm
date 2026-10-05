@@ -211,7 +211,7 @@ const CONFIG = {
   socials: Object.fromEntries(["youtube", "tiktok", "x", "github", "instagram", "facebook"].filter(k => _kv[k]).map(k => [k[0].toUpperCase() + k.slice(1), _kv[k]])),
   orderEndpoint: _kv.orders || "",
   payments: _list(_kv.payments),
-  heroModel: _kv["hero-model"] || "",
+  heroModel: _kv["hero-model"] || "JohnFIles/base.obj",
   protect: { enabled: (_kv.protect || "on").toLowerCase() != "off", action: _kv["protect-action"] || "close" },
   services: _rows(SERVICES),
   bgModels: _rows(BGMODELS).map(r => _clean({ url: r[0], scale: +r[1] || 2.5, id: r[2] })),
